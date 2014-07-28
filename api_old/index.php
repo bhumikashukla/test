@@ -1,21 +1,13 @@
 <?php
+error_reporting(E_ALL ^ E_DEPRECATED);
 class funcs_code 
 {
    var $url  = "";
    var $conn="";
-   var $dba="test_repo"; 
+   var $dba="test"; 
    var $host="localhost";
    var $user="root";
-   var $pass="";  
-   
-   /*var $url  = "http://me.intlfaces.com/admin/";
-   var $conn="";
-   var $dba="linkixvk_monocircle"; 
-   var $host="localhost";
-   var $user="root";
-   var $pass=""; */
-   
-   
+   var $pass="";
   
    public function connection()
    {
@@ -43,12 +35,12 @@ function login($username, $password)
     {
         $password = $_POST["password"];
     }
-    $q = "UPDATE user SET status = '0' WHERE username = $username & password = $password";
+    $q = "selct * from users WHERE username = $username & password = $password";
     $resdetail = mysql_query($q);  
 	$rowdetail = mysql_fetch_assoc($resdetail);    
     $output = $rowdetail;      
     echo json_encode($output);
 }
 
-login('bhumika', '123');
+login('bhumika', '132132132132');
 ?>
