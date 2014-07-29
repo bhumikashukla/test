@@ -7,7 +7,7 @@ class Login {
     public function setName($name) {
 			$this->name = $name;
     }
-    public function check_login() {
+    public function checklogin() {
         return "123";
     }
 }
