@@ -2,21 +2,21 @@
 require_once "Login.php";
 class CheckLogin extends PHPUnit_Framework_TestCase
 {
-    protected $user;
+    protected $Login;
 	
 	protected function setUp() {
-        $this->user = new User();
+        $this->user = new Login();
         $this->user->setName("Tom");
     }
 	
 	protected function tearDown() {
-        unset($this->user);
+        unset($this->Login);
     }
 	
-	public function check_login() {
-        $user = new User();
+	public function testcheck_login() {
+        $Login = new Login();
         $expected = "Hello World";
-        $actual = $user->checklogin();
+        $actual = $Login->checklogin();
         $this->assertEquals($expected, $actual);
     }
 }
