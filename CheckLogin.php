@@ -15,7 +15,7 @@ class CheckLogin extends PHPUnit_Framework_TestCase
 	
 	public function check_login() {
         $user = new User();
-        $expected = "123";
+        $expected = "Hello World";
         $actual = $user->checklogin();
         $this->assertEquals($expected, $actual);
     }
